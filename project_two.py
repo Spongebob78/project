@@ -7,8 +7,8 @@ T1=3.156*10**7
 R2=3.844*10**7
 T2=2.36*10**6
 N=1000.0
-R3 = 0.7*10**8
-R4 = 0.2*10**8
+R3 = 0.86*10**8
+R4 = 0.4*10**8
 
 def X(t):
     return R1*np.cos(2*np.pi*t/T1)
@@ -30,9 +30,9 @@ def Ycometa(t):
     return -R1*np.sin(2*np.pi*t/-T1)
 
 def XMercur(t):
-    return R3*np.cos(2*np.pi*t/T1)
+    return R4*np.cos(2*np.pi*t/T1)
 def YMercur(t):
-    return R3*np.sin(2*np.pi*t/T1)
+    return R4*np.sin(2*np.pi*t/T1)
 
 t=[T1*i/N for i in np.arange(0,N,1)]
 
@@ -58,7 +58,7 @@ cometa, = plt.plot([], [], '.', color='red')
 Mercur, = plt.plot([], [], 'o', color='firebrick')
 trajectory, = plt.plot([], [], '-', color='blue')
 trajectory1, = plt.plot([], [], '-', color='gainsboro')
-trajectory2, = plt.plot([], [], '-', color='lemonchiffon')
+trajectory2, = plt.plot([], [], '-', color='y')
 trajectory3, = plt.plot([], [], '-', color='red')
 trajectory4, = plt.plot([], [], '-', color='red')
 
