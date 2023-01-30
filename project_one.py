@@ -45,7 +45,9 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
-    plt.plot([0], [0] , marker='o', color='gold')
+
+    c=plt.Circle ((0,0), radius= 20 , color='gold')
+    plt.gca ().add_artist (c)
     ball.set_data(X[i], Y[i])
     ball1.set_data(Xx[i], Yy[i])
     ball2.set_data(Xcometa[i], Ycometa[i])
