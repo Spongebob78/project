@@ -43,13 +43,13 @@ XG = X+x
 YG = Y+y
 
 fig, ax = plt.subplots()
-zemly, = plt.plot([], [], 'o', color='blue')
+zemly, = plt.plot([], [], 'o', color='darkgreen')
 luna, = plt.plot([], [], 'o', color='gray')
-venera, = plt.plot([], [], 'o', color='red')
+venera, = plt.plot([], [], 'o', color='y')
 cometa, = plt.plot([], [], '.', color='red')
 trajectory, = plt.plot([], [], '-', color='blue')
-trajectory1, = plt.plot([], [], '-', color='gray')
-trajectory2, = plt.plot([], [], '-', color='red')
+trajectory1, = plt.plot([], [], '-', color='gainsboro')
+trajectory2, = plt.plot([], [], '-', color='lemonchiffon')
 trajectory3, = plt.plot([], [], '-', color='red')
 
 edge = 2*10**8
