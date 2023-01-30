@@ -29,10 +29,8 @@ ax.set_ylim(-edge, edge)
 def animate(i):
     ax.set_facecolor('black')
     c=plt.Circle ((0, 0), radius= 0.3*10**8 , color='red', alpha= .3 )
-#add circle to plot (gca means "get current axis")
     plt.gca ().add_artist (c)
-    ball.set_data(X[i], Y[i])
-    trajectory.set_data(X[i], Y[i])
+
 
 ani = animation.FuncAnimation(fig,
                               animate,

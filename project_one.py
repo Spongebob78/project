@@ -1,6 +1,7 @@
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.widgets import Cursor
 
 R1=1.5*10**8
 R2 = 1*10**8
@@ -45,6 +46,7 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
+
 
     c=plt.Circle ((0,0), radius= 20 , color='gold')
     plt.gca ().add_artist (c)

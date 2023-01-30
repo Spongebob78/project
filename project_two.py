@@ -1,6 +1,7 @@
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.widgets import Cursor
 
 R1=1.496*10**8
 T1=3.156*10**7
