@@ -16,6 +16,10 @@ def Xx(t):
     return R2*np.cos(2*np.pi*t/T2)
 def Yy(t):
     return R2*np.sin(2*np.pi*t/T2)
+def Xcometa(t):
+    return -R1*np.cos(2*np.pi*t/-T1)
+def Ycometa(t):
+    return -R1*np.sin(2*np.pi*t/-T1)
 
 
 t=[T1*i/N for i in np.arange(0,N,1)]
@@ -24,12 +28,17 @@ X=np.array([X(w) for w in t])
 Y=np.array([Y(w) for w in t])
 Xx=np.array([Xx(w) for w in t])
 Yy=np.array([Yy(w) for w in t])
+Xcometa=np.array([Xcometa(w) for w in t])
+Ycometa=np.array([Ycometa(w) for w in t])
+
 
 fig, ax = plt.subplots()
 ball, = plt.plot([], [], 'o', color='blue')
 ball1, = plt.plot([], [], 'o', color='red')
+ball2, = plt.plot([], [], '.', color='red')
 trajectory, = plt.plot([], [], '-', color='red')
 trajectory1, = plt.plot([], [], '-', color='red')
+trajectory2, = plt.plot([], [], '-', color='red')
 
 edge = 2*10**8
 ax.set_xlim(-edge, edge)
@@ -39,8 +48,10 @@ def animate(i):
     plt.plot([0], [0] , marker='o', color='gold')
     ball.set_data(X[i], Y[i])
     ball1.set_data(Xx[i], Yy[i])
+    ball2.set_data(Xcometa[i], Ycometa[i])
     trajectory.set_data(X[i], Y[i])
     trajectory1.set_data(Xx[i], Yy[i])
+    trajectory2.set_data(Xcometa[i], Ycometa[i])
 
 ani = animation.FuncAnimation(fig,
                               animate,

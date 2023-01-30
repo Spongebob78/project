@@ -4,12 +4,14 @@ import numpy as np
 
 R1=1.5*10**8
 R2 = 1*10**8
+T1=3.2*10**7
+T2=2.8*10**7
 N=1000
 
 def X(t):
-    return R1*np.cos(2*np.pi*t/T1)
+    return -R1*np.cos(2*np.pi*t/-T1)
 def Y(t):
-    return R1*np.sin(2*np.pi*t/T1)
+    return -R1*np.sin(2*np.pi*t/-T1)
 
 t=[T1*i/N for i in np.arange(0,N,1)]
 
