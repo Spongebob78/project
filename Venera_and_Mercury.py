@@ -48,6 +48,7 @@ def animate(i):
     Mercur.set_data(XMercur[i], YMercur[i])
     trajectory2.set_data(XVenera[:i], YVenera[:i])
     trajectory4.set_data(XMercur[:i], YMercur[:i])
+    plt.title('Траектории Меркурия и Венеры')
     
 ani = animation.FuncAnimation(fig,
                               animate,

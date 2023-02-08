@@ -68,6 +68,7 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
+    plt.title('Столкновение астероида с планетой Земля')
     ax.set_facecolor('black')
     c=plt.Circle ((0, 0), radius= 0.07*10**8 , color='gold', alpha= .3 )
     plt.gca ().add_artist (c)

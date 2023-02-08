@@ -68,23 +68,16 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
-    ax.set_facecolor('black')
-    c=plt.Circle ((0, 0), radius= 0.07*10**8 , color='gold', alpha= .3 )
-    plt.gca ().add_artist (c)
+    plt.title('Траектория движения Земли и луны')
     zemly.set_data(X[i], Y[i])
     luna.set_data(XG[i], YG[i])
-    venera.set_data(XVenera[i], YVenera[i])
-    cometa.set_data(Xcometa[i], Ycometa[i])
-    Mercur.set_data(XMercur[i], YMercur[i])
-    trajectory2.set_data(XVenera[:i], YVenera[:i])
     trajectory.set_data(X[:i], Y[:i])
     trajectory1.set_data(XG[:i], YG[:i])
-    trajectory3.set_data(Xcometa[i], Ycometa[i])
-    trajectory4.set_data(XMercur[:i], YMercur[:i])
+ 
     
 ani = animation.FuncAnimation(fig,
                               animate,
-                              frames=250,
+                              frames=1000,
                               interval=30,
                              )
 

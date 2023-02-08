@@ -38,12 +38,13 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
+    plt.title('Астероид')
     cometa.set_data(Xcometa[i], Ycometa[i])
     trajectory3.set_data(Xcometa[i], Ycometa[i])
     
 ani = animation.FuncAnimation(fig,
                               animate,
-                              frames=1000,
+                              frames=900,
                               interval=30,
                              )
 

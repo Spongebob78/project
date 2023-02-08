@@ -18,6 +18,8 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
+    plt.title('Последствие столкновения космических объектов')
+    plt.xlabel('')
     ball.set_data(circle_move(R=1, k=1, time=i))
     
 ani = animation.FuncAnimation(fig,
