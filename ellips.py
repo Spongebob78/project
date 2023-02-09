@@ -1,21 +1,14 @@
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+from math import pi
 
-def ellips(p = 10, ee = 0.5):
-    
-    fi = np.arange(0, np.pi * 9, 0.01)
-    
-    r = p / (1 + (ee * np.cos(fi)))
-    
-    x = r * np.cos(fi)
-    y = r * np.sin(fi)
-    return x, y
+u=1.     #x-position of the center
+v=0.5    #y-position of the center
+a=2.     #radius on the x-axis
+b=1.5    #radius on the y-axis
 
-X, Y = [], []
-
-edge = 10
-plt.xlim(-edge, edge)
-plt.ylim(-edge, edge)
-plt.plot(X, Y)
+t = np.linspace(0, 2*pi, 100)
+plt.plot( u+a*np.cos(t) , v+b*np.sin(t) )
+plt.grid(color='lightgray',linestyle='--')
 plt.title('Эллипс')
-plt.savefig('lab_6_dop_2.png')
+plt.savefig('ellipss.png')

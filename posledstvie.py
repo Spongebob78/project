@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 fig, ax = plt.subplots()
-ball, = plt.plot([], [], 'o', color='red', label='Ball')
+ball, = plt.plot([], [], '.', color='red', label='Ball')
  
 def circle_move(R, k, time):
     R = k * time # линейная 
@@ -18,6 +18,7 @@ ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 def animate(i):
+    ax.set_facecolor('black')
     plt.title('Последствие столкновения космических объектов')
     plt.xlabel('')
     ball.set_data(circle_move(R=1, k=1, time=i))
